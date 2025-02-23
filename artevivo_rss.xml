@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>ArteVivo - Galería de Arte</title>
+    <link>https://www.artevivo.com</link>
+    <description>Explora lo mejor del arte en línea. Descubre obras de artistas de todo el mundo en nuestra galería virtual.</description>
+    <language>es</language>
+    <lastBuildDate>Tue, 20 Feb 2025 12:00:00 GMT</lastBuildDate>
+    <generator>ArteVivo RSS Generator</generator>
+
+    <item>
+      <title>Leonardo da Vinci - Artista Destacado</title>
+      <link>https://www.artevivo.com/artistas.html#leonardo</link>
+      <description>Descubre la vida y obra de Leonardo da Vinci, incluyendo sus obras maestras como la Mona Lisa y La última cena.</description>
+      <pubDate>Tue, 20 Feb 2025 10:00:00 GMT</pubDate>
+      <guid>https://www.artevivo.com/artistas.html#leonardo</guid>
+    </item>
+
+    <item>
+      <title>Frida Kahlo - Artista Destacada</title>
+      <link>https://www.artevivo.com/artistas.html#frida</link>
+      <description>Explora el arte de Frida Kahlo, sus autorretratos y su impacto en el arte mexicano y mundial.</description>
+      <pubDate>Tue, 20 Feb 2025 10:00:00 GMT</pubDate>
+      <guid>https://www.artevivo.com/artistas.html#frida</guid>
+    </item>
+
+    <item>
+      <title>Horarios de Visitas Guiadas</title>
+      <link>https://www.artevivo.com/pagina.html#tabla</link>
+      <description>Consulta los horarios de visitas guiadas disponibles en nuestra galería virtual.</description>
+      <pubDate>Tue, 20 Feb 2025 09:00:00 GMT</pubDate>
+      <guid>https://www.artevivo.com/pagina.html#tabla</guid>
+    </item>
+
+    <item>
+      <title>Obras Destacadas</title>
+      <link>https://www.artevivo.com/pagina.html#obras-destacadas</link>
+      <description>Explora nuestra selección de obras destacadas en la galería virtual.</description>
+      <pubDate>Tue, 20 Feb 2025 08:00:00 GMT</pubDate>
+      <guid>https://www.artevivo.com/pagina.html#obras-destacadas</guid>
+    </item>
+  </channel>
+</rss>
