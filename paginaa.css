@@ -248,18 +248,3 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
-/* Layout responsivo */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    #obras-destacadas ul li {
-        flex: 1 1 100%;
-    }
-
-    .nav-vertical {
-        width: 100%;
-    }
-}
