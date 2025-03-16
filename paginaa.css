@@ -1,4 +1,8 @@
 /* Estilos generales del cuerpo */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -26,7 +30,24 @@ header p {
     font-size: 1.2em;
 }
 
-/* Estilos del menú de navegación horizontal */
+/* Estilos del menú de navegación */
+nav {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: #444;
+    font-size: 1.5em;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -50,24 +71,6 @@ nav ul li a {
 nav ul li a:hover {
     background: #555;
     border-radius: 5px;
-}
-
-/* Menú de navegación vertical (alternativo) */
-.nav-vertical {
-    width: 200px;
-    background: #444;
-    padding: 20px 0;
-}
-
-.nav-vertical ul {
-    flex-direction: column;
-    align-items: center;
-}
-
-.nav-vertical ul li {
-    width: 100%;
-    padding: 10px 0;
-    border-bottom: 1px solid #555;
 }
 
 /* Estilos del contenido principal */
@@ -105,6 +108,7 @@ h2 {
 
 #obras-destacadas ul li {
     flex: 1 1 calc(33.333% - 10px);
+    min-width: 250px;
     box-sizing: border-box;
 }
 
@@ -119,23 +123,36 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Estilos de enlaces */
-a {
-    color: #0066cc;
-    text-decoration: none;
-    transition: color 0.3s;
-    border-bottom: 1px dotted #0066cc;
+/* Estilos multimedia */
+audio {
+    width: 100%;
+    margin: 10px 0;
 }
 
-a:hover {
-    color: #004099;
-    border-bottom: 1px solid #004099;
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Estilos de tabla */
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
-    border-collapse: collapse ;
+    border-collapse: collapse;
     margin: 20px 0;
     background-color: #fff;
 }
@@ -157,15 +174,17 @@ tr:nth-child(even) td {
     background-color: #f2f2f2;
 }
 
-/* Estilos de listas generales */
-ul:not(nav ul, #obras-destacadas ul) {
-    list-style-type: square;
-    padding-left: 20px;
+/* Estilos de enlaces */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 1px dotted #0066cc;
 }
 
-ul:not(nav ul, #obras-destacadas ul) li {
-    padding: 5px 0;
-    border-bottom: 1px dashed #ddd;
+a:hover {
+    color: #004099;
+    border-bottom: 1px solid #004099;
 }
 
 /* Estilos del formulario */
@@ -243,8 +262,81 @@ footer {
 footer a {
     color: #1e90ff;
     text-decoration: none;
+    border-bottom: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+    border-bottom: none;
+}
+
+/* Media queries para diseño responsive */
+@media screen and (max-width: 768px) {
+    /* Ajustes de navegación para dispositivos móviles */
+    .menu-icon {
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    /* Ajustes de obras destacadas */
+    #obras-destacadas ul li {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+    
+    /* Ajustes para el audio */
+    audio {
+        width: 100%;
+    }
+    
+    /* Ajustes para videos */
+    video {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Ajustes para el tamaño de letra */
+    header h1 {
+        font-size: 2em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas */
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    main {
+        padding: 10px;
+    }
+    
+    form {
+        padding: 10px;
+    }
+    
+    th, td {
+        padding: 6px;
+        font-size: 0.9em;
+    }
 }
